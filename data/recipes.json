@@ -1,0 +1,113 @@
+[
+  {
+    "id": "1",
+    "name": "Spaghetti Carbonara",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g Parmesan cheese",
+      "2 cloves garlic",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Cook the spaghetti according to package instructions.",
+      "Fry pancetta until crispy, then add minced garlic.",
+      "Beat eggs with grated Parmesan cheese.",
+      "Drain pasta and mix with pancetta and garlic.",
+      "Remove from heat, stir in egg mixture quickly.",
+      "Season with salt and pepper, then serve."
+    ],
+    "cookingTime": "25 minutes",
+    "servings": 2,
+    "image": "https://images.unsplash.com/photo-1603133872878-684f2076556d"
+  },
+  {
+    "id": "2",
+    "name": "Chicken Teriyaki",
+    "ingredients": [
+      "2 chicken thighs",
+      "1/4 cup soy sauce",
+      "2 tbsp mirin",
+      "2 tbsp sake",
+      "1 tbsp sugar",
+      "1 tsp grated ginger"
+    ],
+    "instructions": [
+      "Mix soy sauce, mirin, sake, sugar, and ginger to make teriyaki sauce.",
+      "Marinate chicken for 20 minutes.",
+      "Pan-fry chicken until browned on both sides.",
+      "Pour in remaining marinade and cook until thickened.",
+      "Slice and serve with rice or veggies."
+    ],
+    "cookingTime": "30 minutes",
+    "servings": 2,
+    "image": "https://images.unsplash.com/photo-1584270354949-1afddc88c3f8"
+  },
+  {
+    "id": "3",
+    "name": "Caprese Salad",
+    "ingredients": [
+      "2 tomatoes",
+      "200g fresh mozzarella",
+      "Fresh basil leaves",
+      "2 tbsp olive oil",
+      "Salt and pepper",
+      "Balsamic glaze (optional)"
+    ],
+    "instructions": [
+      "Slice tomatoes and mozzarella.",
+      "Layer alternately on a plate with basil leaves.",
+      "Drizzle with olive oil and balsamic glaze.",
+      "Season with salt and pepper."
+    ],
+    "cookingTime": "10 minutes",
+    "servings": 2,
+    "image": "https://images.unsplash.com/photo-1625947563697-7a190c0b8cf3"
+  },
+  {
+    "id": "4",
+    "name": "Beef Tacos",
+    "ingredients": [
+      "250g ground beef",
+      "1 packet taco seasoning",
+      "8 small taco shells",
+      "1/2 cup shredded lettuce",
+      "1/2 cup diced tomatoes",
+      "1/2 cup shredded cheese",
+      "Sour cream and salsa (optional)"
+    ],
+    "instructions": [
+      "Cook ground beef in a skillet until browned.",
+      "Add taco seasoning and a bit of water, simmer until thickened.",
+      "Warm taco shells.",
+      "Fill with beef, lettuce, tomatoes, cheese, and optional toppings."
+    ],
+    "cookingTime": "20 minutes",
+    "servings": 4,
+    "image": "https://images.unsplash.com/photo-1613145993481-97b53deff5cd"
+  },
+  {
+    "id": "5",
+    "name": "Pancakes",
+    "ingredients": [
+      "1 cup flour",
+      "1 tbsp sugar",
+      "1 tsp baking powder",
+      "1/2 tsp baking soda",
+      "1 cup buttermilk",
+      "1 egg",
+      "2 tbsp melted butter"
+    ],
+    "instructions": [
+      "Mix dry ingredients in one bowl and wet ingredients in another.",
+      "Combine both and mix until smooth.",
+      "Heat a pan and pour batter in small circles.",
+      "Cook until bubbles form, then flip and cook other side.",
+      "Serve with maple syrup or fruits."
+    ],
+    "cookingTime": "15 minutes",
+    "servings": 3,
+    "image": "https://images.unsplash.com/photo-1587731596466-118611bf26f3"
+  }
+]
