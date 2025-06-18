@@ -1,4 +1,5 @@
 "use client"
+import RecipeCard from "@/components/RecipeCard";
 import Recipe from "@/types/recipe";
 import Image from "next/image";
 import Link from "next/link";
@@ -125,19 +126,7 @@ export default function Home() {
       </section>
       <section className="bg-white flex flex-row gap-5 p-20">
         {recipes.map(recipe => (
-          <div key={recipe.id} className="flex flex-col justify-between border p-5">
-            <Image
-              src={recipe.image}
-              alt={recipe.name}
-              width={16}
-              height={16}
-            />
-            <h2>{recipe.name}</h2>
-            <p>{recipe.cookingTime}</p>
-            <Link href={"/recipes/" + recipe.id} className="m-5">
-              <button className="border p-5">See More</button>
-            </Link>
-          </div>
+          <RecipeCard key={recipe.id} recipe={recipe}/>
         ))}
     </section>
   </div>

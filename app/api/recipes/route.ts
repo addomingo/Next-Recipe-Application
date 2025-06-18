@@ -8,8 +8,6 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const id = searchParams.get("id");
     const search = searchParams.get("search");
-    console.log("id: ", id);
-    console.log("search: ", search);
 
     // obtain the path relative to package.json
     const filePath = path.join(process.cwd(), 'data', 'recipes.json');

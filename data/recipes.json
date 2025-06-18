@@ -20,7 +20,7 @@
     ],
     "cookingTime": "25 minutes",
     "servings": 2,
-    "image": "https://images.unsplash.com/photo-1603133872878-684f2076556d"
+    "image": "/images/RoastedButternutSquashSalad.jpg"
   },
   {
     "id": "2",
@@ -42,7 +42,7 @@
     ],
     "cookingTime": "30 minutes",
     "servings": 2,
-    "image": "https://images.unsplash.com/photo-1584270354949-1afddc88c3f8"
+    "image": "/images/RoastedButternutSquashSalad.jpg"
   },
   {
     "id": "3",
@@ -63,7 +63,7 @@
     ],
     "cookingTime": "10 minutes",
     "servings": 2,
-    "image": "https://images.unsplash.com/photo-1625947563697-7a190c0b8cf3"
+    "image": "/images/RoastedButternutSquashSalad.jpg"
   },
   {
     "id": "4",
@@ -85,7 +85,7 @@
     ],
     "cookingTime": "20 minutes",
     "servings": 4,
-    "image": "https://images.unsplash.com/photo-1613145993481-97b53deff5cd"
+    "image": "/images/RoastedButternutSquashSalad.jpg"
   },
   {
     "id": "5",
@@ -108,7 +108,7 @@
     ],
     "cookingTime": "15 minutes",
     "servings": 3,
-    "image": "https://images.unsplash.com/photo-1587731596466-118611bf26f3"
+    "image": "/images/RoastedButternutSquashSalad.jpg"
   },
   {
     "id": "6",
