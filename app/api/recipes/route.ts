@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
     const filteredRecipes = id 
         ? data.filter(recipe => (id === recipe.id))
         : search
-            ? data.filter(recipe => recipe.name.includes(search))
+            ? data.filter(recipe => recipe.name.toLowerCase().includes(search.toLowerCase()))
             : data;
 
     // return the data
