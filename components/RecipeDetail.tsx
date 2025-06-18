@@ -10,7 +10,7 @@ export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
     <div className="w-full">
         <section className="w-full relative">
             <div className="h-[15rem]">
-                <button type="button" className="font-semibold" onClick={() => router.back()}>
+                <button type="button" className="font-semibold text-lg" onClick={() => router.back()}>
                     ← GO BACK
                 </button>
             </div>
@@ -41,7 +41,7 @@ export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
                 <div className="flex flex-col gap-1 max-w-[70%]">
                     <h3 className="text-lg font-semibold">Instructions</h3>
                     { recipe.instructions.map((instruction, index) => 
-                        <div className="flex gap-3 items-start">
+                        <div className="flex gap-3 items-start bg-white/80 backdrop-blur-sm rounded p-3 shadow-md">
                             <div className="w-4 h-4 rounded-full flex-shrink-0 bg-black text-xs text-white flex items-center justify-center mt-1">{index + 1}</div>
                             <h4>{instruction}</h4>
                         </div>
