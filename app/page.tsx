@@ -122,11 +122,11 @@ export default function Home() {
   return (
     <div className="bg-MainBackground flex flex-col gap-5">
       <section className="h-screen flex flex-col items-center p-20">
-        <h1 className="text-BlackText font-extrabold text-5xl">BEHOLD, RECIPES!</h1>
-        <h3 className="text-BlackText font-bold text-lg">WHAT WOULD YOU LIKE TO COOK TODAY?</h3>
+        <h1 className="text-BlackText font-extrabold text-7xl">recipes</h1>
+        <h3 className="text-BlackText font-bold text-lg">what would you like to cook today?</h3>
         <FeaturedRecipes />
       </section>
-      <section className="bg-white flex flex-row gap-5 p-20 flex-wrap">
+      <section className="h-screen flex flex-row items-stretch gap-5 p-20 flex-wrap border">
         {recipes.map(recipe => (
           <RecipeCard key={recipe.id} recipe={recipe}/>
         ))}
