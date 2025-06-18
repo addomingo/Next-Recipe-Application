@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Recipe from "@/types/recipe";
 import { useParams} from "next/navigation";
 import Image from "next/image";
+import RecipeDetails from "@/components/RecipeDetail";
 
 export default function RecipeDetailPage() {
     const params = useParams();
@@ -21,8 +22,8 @@ export default function RecipeDetailPage() {
     }
 
     return (
-        <div className="flex flex-row gap-5 p-20">
-            <div key={recipeDetails.id} className="flex flex-col justify-between border p-5">
+        <div className="flex flex-row gap-5 py-20 px-40 bg-MainBackground">
+            {/* <div key={recipeDetails.id} className="flex flex-col justify-between border p-5">
                 <Image
                     src={recipeDetails.image}
                     alt={recipeDetails.name}
@@ -31,7 +32,8 @@ export default function RecipeDetailPage() {
                 />
                 <h2>{recipeDetails.name}</h2>
                 <p>{recipeDetails.cookingTime}</p>
-            </div>
+            </div> */}
+            <RecipeDetails recipe={recipeDetails} />
         </div>
     );
 }

@@ -1,0 +1,77 @@
+"use client"
+import Recipe from "@/types/recipe";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+
+export default function RecipeDetails({ recipe }: { recipe: Recipe }) {
+    const router = useRouter();
+
+  return (
+    <div className="w-full">
+        <section className="w-full relative">
+            <div className="h-[15rem]">
+                <button type="button" className="font-semibold" onClick={() => router.back()}>
+                    ← GO BACK
+                </button>
+            </div>
+            <h1 className="max-w-[50%] text-BlackText font-extrabold text-6xl">{recipe.name}</h1>
+            <div className="absolute top-0 right-0">
+                <div className="h-[35rem] aspect-square relative">
+                    <Image
+                        src={recipe.image}
+                        alt={recipe.name}
+                        fill
+                        className="rounded-full object-cover"
+                    />
+                </div>
+            </div>
+        </section>
+
+        <section className="mt-8">
+            <RecipeInformation servings={recipe.servings} cookingTime={recipe.cookingTime} />
+            <div className="flex mt-5 gap-10 relative z-99">
+                <div className="flex flex-col gap-1 max-w-[30%]">
+                    <h3 className="text-lg font-semibold">Ingredients</h3>
+                    <ul className="list-disc pl-6">
+                        { recipe.ingredients.map((ingredient, index) => 
+                            <li key={index}>{ingredient}</li>
+                        )}
+                    </ul>
+                </div>
+                <div className="flex flex-col gap-1 max-w-[70%]">
+                    <h3 className="text-lg font-semibold">Instructions</h3>
+                    { recipe.instructions.map((instruction, index) => 
+                        <div className="flex gap-3 items-start">
+                            <div className="w-4 h-4 rounded-full flex-shrink-0 bg-black text-xs text-white flex items-center justify-center mt-1">{index + 1}</div>
+                            <h4>{instruction}</h4>
+                        </div>
+                    )}
+                </div>
+            </div>
+        </section>
+    </div>
+  );
+}
+
+interface RecipeInformationProps {
+    servings: number;
+    cookingTime: string;
+}
+
+function RecipeInformation({ servings, cookingTime }: RecipeInformationProps) {
+    return (
+        <div className="flex max-w-[50%]">
+            <div className="bg-BlackText/20 py-3 px-5 text-xl">Recipe <br /> Information</div>
+            <div className="bg-BlackText/10 flex flex-grow justify-evenly items-center">
+                <div className="flex flex-col items-center">
+                    <h4 className="text-xl font-bold leading-none">{servings}</h4>
+                    <h5>Servings</h5>
+                </div>
+                <div className="flex flex-col items-center">
+                    <h4 className="text-xl font-bold leading-none">{cookingTime}</h4>
+                    <h5>Cooking Time</h5>
+                </div>
+            </div>
+        </div>
+    );
+}
