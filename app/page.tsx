@@ -1,4 +1,5 @@
 "use client"
+import FeaturedRecipes from "@/components/FeaturedRecipes";
 import RecipeCard from "@/components/RecipeCard";
 import Recipe from "@/types/recipe";
 import Image from "next/image";
@@ -119,10 +120,11 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-MainBackground flex flex-col gap-5 p-20">
-      <section className="h-screen">
+    <div className="bg-MainBackground flex flex-col gap-5">
+      <section className="h-screen flex flex-col items-center p-20">
         <h1 className="text-BlackText font-extrabold text-5xl">BEHOLD, RECIPES!</h1>
         <h3 className="text-BlackText font-bold text-lg">WHAT WOULD YOU LIKE TO COOK TODAY?</h3>
+        <FeaturedRecipes />
       </section>
       <section className="bg-white flex flex-row gap-5 p-20 flex-wrap">
         {recipes.map(recipe => (

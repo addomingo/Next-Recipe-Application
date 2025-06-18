@@ -89,26 +89,36 @@
   },
   {
     "id": "5",
-    "name": "Pancakes",
+    "name": "Vegan Potstickers",
     "ingredients": [
-      "1 cup flour",
-      "1 tbsp sugar",
-      "1 tsp baking powder",
-      "1/2 tsp baking soda",
-      "1 cup buttermilk",
-      "1 egg",
-      "2 tbsp melted butter"
+      "1 tablespoon sesame oil",
+      "2 cloves garlic, minced",
+      "1 cup mushrooms, finely chopped (shiitake or cremini)",
+      "1 cup cabbage, finely shredded",
+      "1/2 cup carrots, grated",
+      "2 green onions, thinly sliced",
+      "2 tablespoons soy sauce",
+      "1 tablespoon sriracha sauce (adjust to taste)",
+      "2 tablespoons smooth peanut butter",
+      "2 tablespoons water",
+      "1 package vegan potsticker wrappers (for assembly)",
+      "2 tablespoons vegetable oil, divided (for cooking)",
+      "1/4 cup water (for cooking)"
     ],
     "instructions": [
-      "Mix dry ingredients in one bowl and wet ingredients in another.",
-      "Combine both and mix until smooth.",
-      "Heat a pan and pour batter in small circles.",
-      "Cook until bubbles form, then flip and cook other side.",
-      "Serve with maple syrup or fruits."
+      "Heat sesame oil in a large skillet over medium heat. Add minced garlic and sauté for about 1 minute until fragrant.",
+      "Add chopped mushrooms, shredded cabbage, and grated carrots to the skillet. Sauté for 5-7 minutes, stirring occasionally, until the vegetables are tender. Remove from heat and let it cool slightly.",
+      "In a small bowl combine the soy sauce, sriracha sauce, peanut butter and water. Stir until everything is well combined.",
+      "In a large mixing bowl, combine the sautéed vegetables with the sliced green onions. Pour the sauce over the top and toss until the veggies are well coated in the sauce.",
+      "Take a potsticker wrapper and place about 1 heaping teaspoon of filling in the center. Dip your finger in water and run it along the edges of the wrapper. Fold the wrapper over the filling to create a half-moon shape and press the edges firmly to seal. If you want to make a pleat fold as I have, see the instructions in my blog post above.",
+      "Heat 1 tablespoon of vegetable oil in a large non-stick skillet over medium heat. Once hot, arrange the potstickers in a single layer in the skillet, making sure they're not touching each other. Cook for 2-3 minutes until the bottoms are golden brown.",
+      "Carefully pour ¼ cup of water into the skillet and immediately cover with a lid. Allow the potstickers to steam for 5-6 minutes or until the water has evaporated.",
+      "Remove the lid and continue cooking for another 1-2 minutes until the bottoms are crisp again and the potstickers are fully cooked through.",
+      "Transfer the potstickers to a serving plate and repeat the cooking process with the remaining potstickers, adding more oil to the skillet as needed."
     ],
-    "cookingTime": "15 minutes",
-    "servings": 3,
-    "image": "/images/RoastedButternutSquashSalad.jpg"
+    "cookingTime": "35 minutes",
+    "servings": 5,
+    "image": "/images/VeganPotstickers.jpg"
   },
   {
     "id": "6",
