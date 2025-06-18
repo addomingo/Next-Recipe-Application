@@ -18,6 +18,9 @@ export default {
         inter: 'var(--font-inter)',
         geist: 'var(--font-geist-sans)',
         mono: 'var(--font-geist-mono)',
+      },
+      animation: {
+        spinSlow: 'spin 10s linear infinite',
       }
     },
   },

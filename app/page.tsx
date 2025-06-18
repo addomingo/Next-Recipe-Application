@@ -124,7 +124,7 @@ export default function Home() {
         <h1 className="text-BlackText font-extrabold text-5xl">BEHOLD, RECIPES!</h1>
         <h3 className="text-BlackText font-bold text-lg">WHAT WOULD YOU LIKE TO COOK TODAY?</h3>
       </section>
-      <section className="bg-white flex flex-row gap-5 p-20">
+      <section className="bg-white flex flex-row gap-5 p-20 flex-wrap">
         {recipes.map(recipe => (
           <RecipeCard key={recipe.id} recipe={recipe}/>
         ))}
