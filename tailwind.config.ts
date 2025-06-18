@@ -11,7 +11,14 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        MainBackground: "#fdfcfc",
+        BlackText: "#333334",
       },
+      fontFamily: {
+        inter: 'var(--font-inter)',
+        geist: 'var(--font-geist-sans)',
+        mono: 'var(--font-geist-mono)',
+      }
     },
   },
   plugins: [],

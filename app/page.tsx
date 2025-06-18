@@ -118,22 +118,28 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex flex-row gap-5 p-20">
-      {recipes.map(recipe => (
-        <div key={recipe.id} className="flex flex-col justify-between border p-5">
-          <Image
-            src={recipe.image}
-            alt={recipe.name}
-            width={16}
-            height={16}
-          />
-          <h2>{recipe.name}</h2>
-          <p>{recipe.cookingTime}</p>
-          <Link href={"/recipes/" + recipe.id} className="m-5">
-            <button className="border p-5">See More</button>
-          </Link>
-        </div>
-      ))}
+    <div className="bg-MainBackground flex flex-col gap-5 p-20">
+      <section className="h-screen">
+        <h1 className="text-BlackText font-extrabold text-5xl">BEHOLD, RECIPES!</h1>
+        <h3 className="text-BlackText font-bold text-lg">WHAT WOULD YOU LIKE TO COOK TODAY?</h3>
+      </section>
+      <section className="bg-white flex flex-row gap-5 p-20">
+        {recipes.map(recipe => (
+          <div key={recipe.id} className="flex flex-col justify-between border p-5">
+            <Image
+              src={recipe.image}
+              alt={recipe.name}
+              width={16}
+              height={16}
+            />
+            <h2>{recipe.name}</h2>
+            <p>{recipe.cookingTime}</p>
+            <Link href={"/recipes/" + recipe.id} className="m-5">
+              <button className="border p-5">See More</button>
+            </Link>
+          </div>
+        ))}
+    </section>
   </div>
   );
 }
