@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import Recipe from "@/types/recipe";
-import { Search } from "lucide-react";
+import { CircleX, Search } from "lucide-react";
 import Spinner from "./Spinner";
 import Filter from "./Filter";
 
@@ -18,11 +18,16 @@ export default function RecipeGridView() {
 
     useEffect(() => {
         handleFiltering();
+        // since we this function is just reused and should run once on page mount
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     useEffect(() => {
         handleFiltering();
+        // since we this function is just reused
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [search]);
+    
 
     const handleFiltering = async() => {
         setLoading(true);
@@ -55,6 +60,7 @@ export default function RecipeGridView() {
                             onChange={(e) => (setSearch(e.target.value))}
                             className="focus:outline-none"
                         />
+                        <button onClick={() => (setSearch(""))}><CircleX size={18} className="text-gray-500 hover:text-BlackText"/></button>
                     </div>
                     {/* filter button and popup */}
                     <Filter 
