@@ -3,11 +3,13 @@ import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import Recipe from "@/types/recipe";
 import { CircleX, Search, SlidersHorizontal, X } from "lucide-react";
+import Spinner from "./Spinner";
 
 export default function RecipeGridView() {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
     const [search, setSearch] = useState<string>("");
     const [filterVisible, setFilterVisible] = useState<boolean>(false);
+    const [loading, setLoading] = useState(true);
 
     // filters
     const [servings, setServings] = useState<number | "">("");
@@ -24,6 +26,7 @@ export default function RecipeGridView() {
     }, [search]);
 
     const handleFiltering = async() => {
+        setLoading(true);
         try {
             const response = await fetch(`/api/recipes?search=${search}&cookingTime=${cookingTime}&servings=${servings}`);
             if (!response.ok) {
@@ -33,6 +36,8 @@ export default function RecipeGridView() {
             setRecipes(data);
         } catch (err) {
             console.error("Error fetching recipes:", err);
+        } finally {
+            setLoading(false);
         }
     }
 
@@ -118,10 +123,21 @@ export default function RecipeGridView() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-stretch justify-center gap-5 pt-10 pb-20 px-20 flex-wrap">
-                {recipes.map(recipe => (
-                    <RecipeCard key={recipe.id} recipe={recipe}/>
-                ))}
+            <div className="flex-grow">
+                { loading &&
+                    <div className="pt-10">
+                        <Spinner />
+                    </div>
+                }
+                <div className="flex flex-row items-stretch justify-center gap-5 pt-10 pb-20 px-20 flex-wrap">
+                    { recipes.length === 0 ? 
+                        <h1>No recipes found.</h1>
+                        :
+                        recipes.map(recipe => (
+                            <RecipeCard key={recipe.id} recipe={recipe}/>
+                        ))
+                    }
+                </div>
             </div>
         </section>
     );

@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 interface RecipeFeature {
@@ -34,7 +35,7 @@ export default function FeaturedRecipes() {
                 style={{ transform: `translateX(-${recipeIndex * 100}%)` }}
             >
                 {featuredRecipes.map((recipe) => (
-                    <div key={recipe.id} className="h-full aspect-square flex-shrink-0 relative">
+                    <Link href={"/recipes/" + recipe.id} key={recipe.id} className="h-full aspect-square flex-shrink-0 relative">
                         <Image
                             src={recipe.image}
                             alt={recipe.name}
@@ -44,17 +45,18 @@ export default function FeaturedRecipes() {
                         <div className="absolute bottom-0 w-full text-center bg-black/50 text-white py-2 text-sm">
                             {recipe.name}
                         </div>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
         <div className="flex gap-3 justify-center mt-5">
             {featuredRecipes.map((_, index) => (
-                <div
+                <button
                     key={index}
                     className={`h-3 w-3 rounded-full transition-all duration-300 ${
                         index === recipeIndex ? 'bg-BlackText/60' : 'bg-BlackText/25'
                     }`}
+                    onClick={() => setRecipeIndex(index)}
                 />
             ))}
         </div>
