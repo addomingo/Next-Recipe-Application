@@ -11,6 +11,6 @@ export default function Home() {
         <FeaturedRecipes />
       </section>
       <RecipeGridView />
-  </div>
+    </div>
   );
 }

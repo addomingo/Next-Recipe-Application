@@ -22,17 +22,7 @@ export default function RecipeDetailPage() {
     }
 
     return (
-        <div className="flex flex-row gap-5 py-20 px-40 bg-MainBackground">
-            {/* <div key={recipeDetails.id} className="flex flex-col justify-between border p-5">
-                <Image
-                    src={recipeDetails.image}
-                    alt={recipeDetails.name}
-                    width={16}
-                    height={16}
-                />
-                <h2>{recipeDetails.name}</h2>
-                <p>{recipeDetails.cookingTime}</p>
-            </div> */}
+        <div className="flex flex-row gap-5 py-20 px-10 sm:px-20 md:px-40 bg-MainBackground">
             <RecipeDetails recipe={recipeDetails} />
         </div>
     );

@@ -39,7 +39,7 @@ export default function RecipeGridView() {
     return (
         <section className="h-screen flex flex-col items-center">
             <div className="flex flex-col items-center gap-3">
-                <h2 className="text-BlackText font-bold text-4xl">Have something in mind?</h2>
+                <h2 className="text-BlackText font-bold text-3xl sm:text-4xl">Have something in mind?</h2>
                 <div className="flex gap-2">
                     {/* search bar */}
                     <div className="flex items-center gap-2 px-2 py-1 border-2 border-BlackText/25 rounded-lg">
@@ -118,7 +118,7 @@ export default function RecipeGridView() {
                     </div>
                 </div>
             </div>
-            <div className="flex flex-row items-stretch justify-center gap-5 p-20 flex-wrap">
+            <div className="flex flex-row items-stretch justify-center gap-5 pt-10 pb-20 px-20 flex-wrap">
                 {recipes.map(recipe => (
                     <RecipeCard key={recipe.id} recipe={recipe}/>
                 ))}
