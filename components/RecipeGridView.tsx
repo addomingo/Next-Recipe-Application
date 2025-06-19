@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import Recipe from "@/types/recipe";
-import { CircleX, Search, SlidersHorizontal } from "lucide-react";
+import { CircleX, Search, SlidersHorizontal, X } from "lucide-react";
 
 export default function RecipeGridView() {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
@@ -20,25 +20,19 @@ export default function RecipeGridView() {
     }, []);
 
     useEffect(() => {
-        fetch(`/api/recipes?search=${search}`)
-        .then(res => res.json())
-        .then(data => setRecipes(data));
+        handleFiltering();
     }, [search]);
 
-    const handleApplyFilters = async() => {
-        setFilterVisible(false);
+    const handleFiltering = async() => {
         try {
             const response = await fetch(`/api/recipes?search=${search}&cookingTime=${cookingTime}&servings=${servings}`);
-
             if (!response.ok) {
                 throw new Error(`Failed to fetch recipes`);
             }
-
             const data = await response.json();
             setRecipes(data);
         } catch (err) {
             console.error("Error fetching recipes:", err);
-        } finally {
         }
     }
 
@@ -69,7 +63,8 @@ export default function RecipeGridView() {
                         </button>
                         {filterVisible && (
                             <div className="absolute top-full left-0 mt-2 w-64 bg-white border-2 border-BlackText/25 rounded-lg shadow-lg z-50 p-4">
-                                {/* Customize filter options here */}
+                                <X className="text-BlackText place-self-end cursor-pointer" size={18} onClick={() => setFilterVisible(false)}/>
+                                {/* cooking time */}
                                 <h4 className="text-xs text-BlackText font-semibold mb-1">Maximum Cooking Time</h4>
                                 <div className="flex gap-2 border border-BlackText/25 px-2 py-1 rounded-lg justify-between items-center">
                                     <input 
@@ -80,10 +75,11 @@ export default function RecipeGridView() {
                                             setCookingTime(val === "" ? "" : Number(val));
                                         }}
                                         placeholder="e.g. 30"
-                                        className="mr-2 focus:outline-none w-24"
+                                        className="mr-2 focus:outline-none w-24 flex-grow"
                                     />
                                     <button onClick={() => (setCookingTime(""))}><CircleX size={18} className="text-gray-500 hover:text-BlackText"/></button>
                                 </div>
+                                {/* servings */}
                                 <h4 className="text-xs text-BlackText font-semibold mt-3 mb-1">No. of Servings</h4>
                                 <div className="flex gap-2 border border-BlackText/25 px-2 py-1 rounded-lg justify-between items-center">
                                     <input 
@@ -94,13 +90,28 @@ export default function RecipeGridView() {
                                             setServings(val === "" ? "" : Number(val));
                                         }}
                                         placeholder="e.g. 2"
-                                        className="mr-2 focus:outline-none w-24"
+                                        className="mr-2 focus:outline-none w-24 flex-grow"
                                     />
                                     <button onClick={() => (setServings(""))}><CircleX size={18} className="text-gray-500 hover:text-BlackText"/></button>
                                 </div>
+                                {/* clear filters and apply filters buttons */}
                                 <div className="mt-3 flex gap-2 justify-end">
-                                    <button className="bg-white text-sm px-3 py-1 rounded-lg border border-BlackText text-BlackText font-medium" onClick={() => setFilterVisible(false)}>Close</button>
-                                    <button className="bg-BlackText text-sm px-3 py-1 rounded-lg text-white font-medium" onClick={() => setFilterVisible(false)}>Apply</button>
+                                    <button className="bg-white text-sm px-3 py-1 rounded-lg border border-BlackText text-BlackText font-medium" 
+                                        onClick={() => {
+                                            setCookingTime("");
+                                            setServings("");
+                                        }}
+                                    >
+                                        Clear
+                                    </button>
+                                    <button className="bg-BlackText text-sm px-3 py-1 rounded-lg text-white font-medium" 
+                                        onClick={() => {
+                                            setFilterVisible(false);
+                                            handleFiltering();
+                                        }}
+                                    >
+                                        Apply
+                                    </button>
                                 </div>
                             </div>
                         )}

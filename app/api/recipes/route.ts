@@ -8,6 +8,8 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams;
     const id = searchParams.get("id");
     const search = searchParams.get("search");
+    const cookingTime = searchParams.get("cookingTime");
+    const servings = searchParams.get("servings");
 
     // obtain the path relative to package.json
     const filePath = path.join(process.cwd(), 'data', 'recipes.json');
@@ -20,11 +22,39 @@ export async function GET(request: NextRequest) {
         If there is no ID parameter, it checks if there is a search parameter, and returns the recipe/s that includes the search string.
         If there are no parameters provided, it simply returns all the data.
     */
-    const filteredRecipes = id 
-        ? data.filter(recipe => (id === recipe.id))
-        : search
-            ? data.filter(recipe => recipe.name.toLowerCase().includes(search.toLowerCase()))
-            : data;
+    // const filteredRecipes = id 
+    //     ? data.filter(recipe => (id === recipe.id))
+    //     : search
+    //         ? data.filter(recipe => recipe.name.toLowerCase().includes(search.toLowerCase()))
+    //         : data;
+
+    let filteredRecipes = data;
+
+    // filter by ID
+    if (id) filteredRecipes = filteredRecipes.filter(recipe => (id === recipe.id));
+
+    // filter by name
+    if (search) filteredRecipes = filteredRecipes.filter(recipe => recipe.name.toLowerCase().includes(search.toLowerCase()));
+
+    // filter by cooking time (less than or equal)
+    if (cookingTime) {
+        const maxTime = Number(cookingTime);
+        if (!isNaN(maxTime)) {
+            filteredRecipes = filteredRecipes.filter(recipe => {
+                const extractedTime = recipe.cookingTime.match(/\d+/);
+                const recipeTime = extractedTime ? Number(extractedTime[0]) : 0;
+                return recipeTime <= maxTime;
+            });
+        }
+    }
+
+    // Filter by servings (exact match)
+    if (servings) {
+        const requiredServings = Number(servings);
+        if (!isNaN(requiredServings)) {
+            filteredRecipes = filteredRecipes.filter(recipe => recipe.servings === requiredServings);
+        }
+    }
 
     // return the data
     return Response.json(filteredRecipes);
