@@ -2,10 +2,16 @@
 import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import Recipe from "@/types/recipe";
+import { CircleX, Search, SlidersHorizontal } from "lucide-react";
 
 export default function RecipeGridView() {
     const [recipes, setRecipes] = useState<Recipe[]>([]);
     const [search, setSearch] = useState<string>("");
+    const [filterVisible, setFilterVisible] = useState<boolean>(false);
+
+    // filters
+    const [servings, setServings] = useState<number | "">("");
+    const [cookingTime, setCookingTime] = useState<number | "">("");
 
     useEffect(() => {
         fetch("/api/recipes")
@@ -19,17 +25,87 @@ export default function RecipeGridView() {
         .then(data => setRecipes(data));
     }, [search]);
 
+    const handleApplyFilters = async() => {
+        setFilterVisible(false);
+        try {
+            const response = await fetch(`/api/recipes?search=${search}&cookingTime=${cookingTime}&servings=${servings}`);
+
+            if (!response.ok) {
+                throw new Error(`Failed to fetch recipes`);
+            }
+
+            const data = await response.json();
+            setRecipes(data);
+        } catch (err) {
+            console.error("Error fetching recipes:", err);
+        } finally {
+        }
+    }
+
     return (
         <section className="h-screen flex flex-col items-center">
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col items-center gap-3">
                 <h2 className="text-BlackText font-bold text-4xl">Have something in mind?</h2>
-                <input 
-                    type="text"
-                    placeholder="Search for a recipe"
-                    value={search}
-                    onChange={(e) => (setSearch(e.target.value))}
-                    className="px-2 py-1 border-2 border-BlackText/25 rounded-lg focus:outline-none"
-                />
+                <div className="flex gap-2">
+                    {/* search bar */}
+                    <div className="flex items-center gap-2 px-2 py-1 border-2 border-BlackText/25 rounded-lg">
+                        <Search size={20} className="text-gray-500"/>
+                        <input 
+                            type="text"
+                            placeholder="Search for a recipe"
+                            value={search}
+                            onChange={(e) => (setSearch(e.target.value))}
+                            className="focus:outline-none"
+                        />
+                    </div>
+                    {/* filter button and popup */}
+                    <div className="relative">
+                        <button 
+                            className="flex gap-2 items-center bg-BlackText px-2 py-1 rounded-lg text-white font-medium"
+                            onClick={() => setFilterVisible((prev) => !prev)}
+                        >
+                            <SlidersHorizontal size={18} />
+                            Filter
+                        </button>
+                        {filterVisible && (
+                            <div className="absolute top-full left-0 mt-2 w-64 bg-white border-2 border-BlackText/25 rounded-lg shadow-lg z-50 p-4">
+                                {/* Customize filter options here */}
+                                <h4 className="text-xs text-BlackText font-semibold mb-1">Maximum Cooking Time</h4>
+                                <div className="flex gap-2 border border-BlackText/25 px-2 py-1 rounded-lg justify-between items-center">
+                                    <input 
+                                        type="number" 
+                                        value={cookingTime}
+                                        onChange={(e) => {
+                                            const val = e.target.value;
+                                            setCookingTime(val === "" ? "" : Number(val));
+                                        }}
+                                        placeholder="e.g. 30"
+                                        className="mr-2 focus:outline-none w-24"
+                                    />
+                                    <button onClick={() => (setCookingTime(""))}><CircleX size={18} className="text-gray-500 hover:text-BlackText"/></button>
+                                </div>
+                                <h4 className="text-xs text-BlackText font-semibold mt-3 mb-1">No. of Servings</h4>
+                                <div className="flex gap-2 border border-BlackText/25 px-2 py-1 rounded-lg justify-between items-center">
+                                    <input 
+                                        type="number" 
+                                        value={servings}
+                                        onChange={(e) => {
+                                            const val = e.target.value;
+                                            setServings(val === "" ? "" : Number(val));
+                                        }}
+                                        placeholder="e.g. 2"
+                                        className="mr-2 focus:outline-none w-24"
+                                    />
+                                    <button onClick={() => (setServings(""))}><CircleX size={18} className="text-gray-500 hover:text-BlackText"/></button>
+                                </div>
+                                <div className="mt-3 flex gap-2 justify-end">
+                                    <button className="bg-white text-sm px-3 py-1 rounded-lg border border-BlackText text-BlackText font-medium" onClick={() => setFilterVisible(false)}>Close</button>
+                                    <button className="bg-BlackText text-sm px-3 py-1 rounded-lg text-white font-medium" onClick={() => setFilterVisible(false)}>Apply</button>
+                                </div>
+                            </div>
+                        )}
+                    </div>
+                </div>
             </div>
             <div className="flex flex-row items-stretch justify-center gap-5 p-20 flex-wrap">
                 {recipes.map(recipe => (
