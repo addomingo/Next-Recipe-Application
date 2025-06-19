@@ -17,17 +17,6 @@ export async function GET(request: NextRequest) {
     const fileContents = await fs.readFile(filePath, 'utf8');
     const data: Recipe[] = JSON.parse(fileContents);
 
-    /* 
-        First checks if there is an ID parameter, and returns the recipe corresponding to that id.
-        If there is no ID parameter, it checks if there is a search parameter, and returns the recipe/s that includes the search string.
-        If there are no parameters provided, it simply returns all the data.
-    */
-    // const filteredRecipes = id 
-    //     ? data.filter(recipe => (id === recipe.id))
-    //     : search
-    //         ? data.filter(recipe => recipe.name.toLowerCase().includes(search.toLowerCase()))
-    //         : data;
-
     let filteredRecipes = data;
 
     // filter by ID
