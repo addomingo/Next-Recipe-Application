@@ -67,7 +67,7 @@ export default function RecipeGridView() {
                             Filter
                         </button>
                         {filterVisible && (
-                            <div className="absolute top-full left-0 mt-2 w-64 bg-white border-2 border-BlackText/25 rounded-lg shadow-lg z-50 p-4">
+                            <div className="absolute top-full right-0 md:left-0 mt-2 w-64 bg-white border-2 border-BlackText/25 rounded-lg shadow-lg z-50 p-4">
                                 <X className="text-BlackText place-self-end cursor-pointer" size={18} onClick={() => setFilterVisible(false)}/>
                                 {/* cooking time */}
                                 <h4 className="text-xs text-BlackText font-semibold mb-1">Maximum Cooking Time</h4>

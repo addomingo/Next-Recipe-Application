@@ -1,26 +1,25 @@
 [
   {
     "id": "1",
-    "name": "Spaghetti Carbonara",
+    "name": "Tomato Basil Soup",
     "ingredients": [
-      "200g spaghetti",
-      "100g pancetta",
-      "2 large eggs",
-      "50g Parmesan cheese",
+      "4 tomatoes",
+      "1 onion",
       "2 cloves garlic",
-      "Salt and pepper"
+      "2 cups vegetable broth",
+      "1/2 cup heavy cream",
+      "Fresh basil"
     ],
     "instructions": [
-      "Cook the spaghetti according to package instructions.",
-      "Fry pancetta until crispy, then add minced garlic.",
-      "Beat eggs with grated Parmesan cheese.",
-      "Drain pasta and mix with pancetta and garlic.",
-      "Remove from heat, stir in egg mixture quickly.",
-      "Season with salt and pepper, then serve."
+      "Sauté onion and garlic until translucent.",
+      "Add chopped tomatoes and broth.",
+      "Simmer for 20 minutes, then blend until smooth.",
+      "Stir in cream and chopped basil.",
+      "Serve warm."
     ],
-    "cookingTime": "25 minutes",
-    "servings": 2,
-    "image": "/images/SpaghettiCarbonara.jpg"
+    "cookingTime": "35 minutes",
+    "servings": 3,
+    "image": "/images/TomatoBasilSoup.webp"
   },
   {
     "id": "2",
@@ -42,7 +41,7 @@
     ],
     "cookingTime": "30 minutes",
     "servings": 2,
-    "image": "/images/ChickenTeriyaki.jpg"
+    "image": "/images/ChickenTeriyaki.webp"
   },
   {
     "id": "3",
@@ -63,7 +62,7 @@
     ],
     "cookingTime": "10 minutes",
     "servings": 2,
-    "image": "/images/RoastedButternutSquashSalad.jpg"
+    "image": "/images/CapreseSalad.webp"
   },
   {
     "id": "4",
@@ -85,7 +84,7 @@
     ],
     "cookingTime": "20 minutes",
     "servings": 4,
-    "image": "/images/RoastedButternutSquashSalad.jpg"
+    "image": "/images/BeefTacos.webp"
   },
   {
     "id": "5",
@@ -118,7 +117,7 @@
     ],
     "cookingTime": "35 minutes",
     "servings": 5,
-    "image": "/images/VeganPotstickers.jpg"
+    "image": "/images/VeganPotstickers.webp"
   },
   {
     "id": "6",
@@ -149,6 +148,330 @@
     ],
     "cookingTime": "35 minutes",
     "servings": 4,
-    "image": "/images/RoastedButternutSquashSalad.jpg"
+    "image": "/images/RoastedButternutSquashSalad.webp"
+  },
+  {
+    "id": "7",
+    "name": "Soba Noodle Salad",
+    "ingredients": [
+      "1 package soba noodles, gluten-free if necessary",
+      "1 red bell pepper, sliced thinly",
+      "2 medium carrots, sliced thinly into matchsticks",
+      "4 tablespoons + 1 tsp olive oil or sesame oil",
+      "1 bunch scallions, thinly sliced into rounds. Reserve half of the dark green for topping",
+      "1 jalapeño, minced",
+      "1/2 tsp salt",
+      "1 lemon",
+      "1/2 cup cilantro, roughly chopped",
+      "Sesame seeds for topping, optional"
+    ],
+    "instructions": [
+        "Bring a medium pot of salted water to a boil. Add the sliced carrots and blanch until just tender, about 1 minute. Using a slotted spoon, transfer the carrots to a colander in the sink and run cold water over them to stop the cooking process.",
+        "Return the water in the pot to a boil and add the soba noodles. Reduce heat to medium and cook until tender, about 3-4 minutes. Drain and run under cold water to stop the cooking process and to cool the noodles for the salad.",
+        "In a small saucepan, heat the olive oil.",
+        "Place the sliced scallions, minced jalapeño and salt in a heat-proof bowl.",
+        "When the oil is heated (it will be shimmering), carefully pour the hot oil over the scallion mixture in the bowl. Immediately stir to combine, using a spoon to lightly bruise the scallions and jalapeño to release their flavors into the oil. Add the lemon juice and stir the dressing to combine.",
+        "In a large bowl, combine cooked soba noodles, red bell pepper and blanched and cooled carrots. Add the dressing and cilantro, toss well, and top with reserved scallion greens and sesame seeds."
+    ],
+    "cookingTime": "15 minutes",
+    "servings": 4,
+    "image": "/images/SobaNoodleSalad.webp"
+  },
+  {
+    "id": "8",
+    "name": "Som Tam Thai",
+    "ingredients": [
+      "2 small garlic cloves (6 g)",
+      "2 to 3 fresh Thai chiles (2 to 3 g total), stemmed",
+      "1 tablespoon (8 g) dried shrimp", 
+      "2 tablespoons (30 g) roasted unsalted peanuts, divided",
+      "1 tablespoon plus 2 teaspoons (35 g) palm sugar, softened",
+      "4 cherry tomatoes (about 2 ounces; 60 g), halved",
+      "2 long beans (about 30 g), ends trimmed, cut crosswise into 2-inch pieces",
+      "3 tablespoons (45 ml) fresh lime juice from 2 limes",
+      "2 tablespoons (30 ml) fish sauce",
+      "2 cups (6 ounces; 170 g) shredded green papaya, from 1 green papaya",
+      "Cooked sticky rice, for serving"
+    ],
+    "instructions": [
+      "In a clay or wooden mortar, combine garlic and chiles and pound with wooden pestle until slightly slightly broken down, making sure to keep the pestle as close to the chiles as possible to avoid splattering chile juices over yourself, about 30 seconds. Add dried shrimp and 1 tablespoon (15g) peanuts and continue to pound until slightly broken down, taking care not to over-pound and form a peanut paste, about 30 seconds.",
+      "Add palm sugar and continue to pound lightly while also working the pestle in a circular motion while applying gentle pressure to help dissolve the palm sugar, about 30 seconds. Add long beans and pound until slightly broken down, 15 to 30 seconds. Add tomatoes and pound gently just until the tomatoes release their juices, about 15 seconds.",
+      "Add lime juice and fish sauce and stir with pestle using a circular motion until well combined and palm sugar is fully dissolved, about 15 seconds. Add green papaya. Holding a large spoon in your non-dominant hand while holding the pestle in your dominant hand, pound down the sides of the mortar (not the center) while simultaneously using the spoon to move the ingredients back and forth in the mortar until ingredients are well combined and green papaya has begun to absorb the dressing, about 30 seconds. Take care not to over-pound the green papaya or it will lose its crisp texture.",
+      "Add remaining 1 tablespoon (15g) peanuts and pound gently just until they are slightly broken down. Transfer salad to a serving plate, and serve immediately with sticky rice." 
+    ],
+    "cookingTime": "15 minutes",
+    "servings": 4,
+    "image": "/images/SomTamThai.webp"
+  },
+  {
+    "id": "9",
+    "name": "Tom Yum Soup",
+    "ingredients": [
+      "1 ½ pounds medium-sized whole raw shrimp (with heads intact)",
+      "1/3 cup flavorless oil",
+      "6 cups water",
+      "5 stalks fresh lemongrass",
+      "15 Kaffir lime leaves, fresh or frozen",
+      "1/2 onion, peeled and cut into wedges",
+      "4-6 Thai chiles (or Thai chile paste to taste)",
+      "1 inch piece galangal root, optional",
+      "2 tablespoons fish sauce",
+      "1 cup straw or button mushrooms, sliced",
+      "1 lime, juiced",
+      "Possible Garnishes: cilantro leaves and lime wedges"
+    ],
+    "instructions": [
+        "Pull the heads off the shrimp and place them in a wok or large skillet. Peel and clean the shrimp and set aside. *You can add the shrimp shells to the skillet as well, but the heads are the important part.",
+        "Add the oil to the skillet and set over medium heat. Add a good pinch of salt. Sauté the shrimp heads to release their flavor into the oil, cooking until they are red and crispy. Then turn off the heat.",
+        "Meanwhile, trim the tips and root ends of the lemongrass stalks and remove the tough outer layers. Cut the lemongrass into 1 ½ inch segments. Cut the galangal into 3 or 4 pieces.",
+        "Using a meat mallet or the side of a knife, smash the lemongrass, kaffir lime leaves, onion, chilies, and galangal. Place them in a medium soup pot. Pour the water into the pot then bring to a boil. Reduce the heat and simmer for 5-10 minutes, until the broth smells bright and fragrant.",
+        "Remove and discard any tough sections of lemongrass. (Keep them all in if the stalks are soft.) Increase the heat to high. Stir in the mushrooms. Boil for 1 minute. Then stir in the shrimp and fish sauce, cooking until the shrimp are just cooked through, about 45 seconds.",
+        "Turn off the heat and stir in the lime juice. Then stir in 3-4 tablespoons of the shrimp oil. (Discard the heads; do not add them to the soup.)",
+        "Serve with fresh lime wedges and cilantro. Tom Yum is often served over rice, however it’s low carb served as-is!"
+    ],
+    "cookingTime": "32 minutes",
+    "servings": 4,
+    "image": "/images/TomYumSoup.webp"
+  },
+  {
+    "id": "10",
+    "name": "Garlic Butter Shrimp",
+    "ingredients": [
+      "300g shrimp",
+      "3 cloves garlic",
+      "2 tbsp butter",
+      "1 tbsp lemon juice",
+      "Salt and pepper",
+      "Chopped parsley"
+    ],
+    "instructions": [
+      "Melt butter in a pan and sauté garlic.",
+      "Add shrimp and cook until pink.",
+      "Season with salt, pepper, and lemon juice.",
+      "Sprinkle with parsley and serve."
+    ],
+    "cookingTime": "15 minutes",
+    "servings": 2,
+    "image": "/images/GarlicButterShrimp.webp"
+  },
+  {
+    "id": "11",
+    "name": "Creamy Mushroom Soup",
+    "ingredients": [
+      "200g mushrooms",
+      "1 onion",
+      "2 cloves garlic",
+      "2 cups chicken stock",
+      "1 cup heavy cream",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Sauté onion and garlic until soft.",
+      "Add sliced mushrooms and cook until browned.",
+      "Pour in chicken stock and simmer for 10 minutes.",
+      "Blend the soup until smooth.",
+      "Add cream, season, and heat through.",
+      "Serve hot."
+    ],
+    "cookingTime": "30 minutes",
+    "servings": 3,
+    "image": "/images/CreamyMushroomSoup.webp"
+  },
+  {
+    "id": "12",
+    "name": "Pesto Pasta",
+    "ingredients": [
+      "200g pasta",
+      "1/2 cup basil pesto",
+      "2 tbsp olive oil",
+      "Grated Parmesan",
+      "Salt"
+    ],
+    "instructions": [
+      "Cook pasta according to package directions.",
+      "Drain and return to pot.",
+      "Stir in pesto and olive oil.",
+      "Mix well and top with Parmesan.",
+      "Serve warm."
+    ],
+    "cookingTime": "35 minutes",
+    "servings": 2,
+    "image": "/images/PestoPasta.webp"
+  },
+  {
+    "id": "13",
+    "name": "Classic Pancakes",
+    "ingredients": [
+      "1 cup all-purpose flour",
+      "2 tbsp sugar",
+      "1 tsp baking powder",
+      "1/2 tsp salt",
+      "1 cup milk",
+      "1 egg",
+      "2 tbsp melted butter"
+    ],
+    "instructions": [
+      "Mix dry ingredients in a bowl.",
+      "Whisk wet ingredients separately.",
+      "Combine and mix until smooth.",
+      "Cook pancakes on a greased skillet until bubbles form and flip.",
+      "Serve with syrup or fruit."
+    ],
+    "cookingTime": "20 minutes",
+    "servings": 4,
+    "image": "/images/ClassicPancakes.webp"
+  },
+  {
+    "id": "14",
+    "name": "Grilled Cheese Sandwich",
+    "ingredients": [
+      "2 slices bread",
+      "2 slices cheese",
+      "1 tbsp butter"
+    ],
+    "instructions": [
+      "Butter one side of each bread slice.",
+      "Place cheese between unbuttered sides.",
+      "Grill sandwich in a pan until golden brown on both sides.",
+      "Serve hot."
+    ],
+    "cookingTime": "10 minutes",
+    "servings": 1,
+    "image": "/images/GrilledCheeseSandwich.webp"
+  },
+  {
+    "id": "15",
+    "name": "Baked Salmon",
+    "ingredients": [
+      "2 salmon fillets",
+      "1 lemon",
+      "2 tbsp olive oil",
+      "2 cloves garlic",
+      "Salt and black pepper",
+      "Fresh dill"
+    ],
+    "instructions": [
+      "Preheat oven to 200°C (400°F).",
+      "Place salmon on a baking tray lined with foil.",
+      "Drizzle with olive oil and lemon juice.",
+      "Sprinkle with minced garlic, salt, pepper, and dill.",
+      "Bake for 15-20 minutes.",
+      "Serve with vegetables or rice."
+    ],
+    "cookingTime": "25 minutes",
+    "servings": 2,
+    "image": "/images/BakedSalmon.webp"
+  },
+  {
+    "id": "16",
+    "name": "Chicken Caesar Salad",
+    "ingredients": [
+      "2 chicken breasts",
+      "1 romaine lettuce head",
+      "1/2 cup Caesar dressing",
+      "Croutons",
+      "Parmesan cheese"
+    ],
+    "instructions": [
+      "Grill or pan-fry chicken and slice thinly.",
+      "Wash and chop lettuce.",
+      "Toss lettuce with Caesar dressing.",
+      "Top with chicken, croutons, and Parmesan.",
+      "Serve immediately."
+    ],
+    "cookingTime": "20 minutes",
+    "servings": 2,
+    "image": "/images/ChickenCaesarSalad.webp"
+  },
+  {
+    "id": "17",
+    "name": "Egg Fried Rice",
+    "ingredients": [
+      "2 cups cooked rice",
+      "2 eggs",
+      "1/2 cup frozen peas and carrots",
+      "2 tbsp soy sauce",
+      "1 tbsp sesame oil",
+      "2 green onions"
+    ],
+    "instructions": [
+      "Scramble eggs in a wok and set aside.",
+      "Add oil, then sauté vegetables.",
+      "Add rice and stir fry for 3–4 minutes.",
+      "Mix in eggs, soy sauce, and chopped green onions.",
+      "Serve hot."
+    ],
+    "cookingTime": "15 minutes",
+    "servings": 2,
+    "image": "/images/EggFriedRice.webp"
+  },
+  {
+    "id": "18",
+    "name": "Spaghetti Carbonara",
+    "ingredients": [
+      "200g spaghetti",
+      "100g pancetta",
+      "2 large eggs",
+      "50g Parmesan cheese",
+      "2 cloves garlic",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Cook the spaghetti according to package instructions.",
+      "Fry pancetta until crispy, then add minced garlic.",
+      "Beat eggs with grated Parmesan cheese.",
+      "Drain pasta and mix with pancetta and garlic.",
+      "Remove from heat, stir in egg mixture quickly.",
+      "Season with salt and pepper, then serve."
+    ],
+    "cookingTime": "25 minutes",
+    "servings": 2,
+    "image": "/images/SpaghettiCarbonara.webp"
+  },
+  {
+    "id": "19",
+   "name": "Stuffed Bell Peppers",
+    "ingredients": [
+      "4 bell peppers",
+      "1 cup cooked rice",
+      "200g ground beef",
+      "1/2 onion",
+      "1 cup tomato sauce",
+      "Cheddar cheese"
+    ],
+    "instructions": [
+      "Preheat oven to 180°C (350°F).",
+      "Sauté onion and ground beef until cooked.",
+      "Mix in cooked rice and tomato sauce.",
+      "Cut tops off peppers, remove seeds, and stuff with filling.",
+      "Top with cheese and bake for 25 minutes.",
+      "Serve hot."
+    ],
+    "cookingTime": "40 minutes",
+    "servings": 4,
+    "image": "/images/StuffedBellPeppers.webp"
+  },
+  {
+    "id": "20",
+    "name": "Mac and Cheese",
+    "ingredients": [
+      "200g macaroni",
+      "2 tbsp butter",
+      "2 tbsp flour",
+      "2 cups milk",
+      "1 1/2 cups cheddar cheese",
+      "Salt and pepper"
+    ],
+    "instructions": [
+      "Cook macaroni and set aside.",
+      "Melt butter, add flour to form a roux.",
+      "Gradually add milk, stirring until thickened.",
+      "Add cheese and stir until melted.",
+      "Combine with macaroni and mix well.",
+      "Serve hot."
+    ],
+    "cookingTime": "25 minutes",
+    "servings": 3,
+    "image": "/images/MacandCheese.webp"
   }
 ]

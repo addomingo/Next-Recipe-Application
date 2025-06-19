@@ -10,11 +10,11 @@ interface RecipeFeature {
 }
 
 const featuredRecipes: RecipeFeature[] = [
-    { id: "1", name: "Spaghetti Carbonara", image: "/images/feature/SpaghettiCarbonara.jpg"},
-    { id: "2", name: "Chicken Teriyaki", image: "/images/feature/ChickenTeriyaki.jpg"},
-    { id: "7", name: "Vegan Potstickers", image: "/images/feature/VeganPotstickers.jpg"},
-    { id: "8", name: "Roasted Butternut Squash Salad", image: "/images/feature/RoastedButternutSquashSalad.jpg"},
-    { id: "9", name: "Vegan Potstickers", image: "/images/feature/VeganPotstickers.jpg"}
+    { id: "3", name: "Caprese Salad", image: "/images/feature/CapreseSalad.webp"},
+    { id: "2", name: "Chicken Teriyaki", image: "/images/feature/ChickenTeriyaki.webp"},
+    { id: "5", name: "Vegan Potstickers", image: "/images/feature/VeganPotstickers.webp"},
+    { id: "6", name: "Roasted Butternut Squash Salad", image: "/images/feature/RoastedButternutSquashSalad.webp"},
+    { id: "18", name: "Spaghetti Carbonara", image: "/images/feature/SpaghettiCarbonara.webp"}
 ];
 
 export default function FeaturedRecipes() {
